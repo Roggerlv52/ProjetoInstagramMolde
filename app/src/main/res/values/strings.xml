@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="Email">E-mail</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="enter">Enter</string>
+    <string name="or">OU</string>
+    <string name="does_not_have_account">Não tem nenhuma conta? <b><font color="#FF000000">Cadastre-se</font></b></string>
+    <string name="already_has_account">Já tem uma conta? <b><font color="#E30505">Faça Login.</font></b></string>
+    <string name="name">Nome</string>
+    <string name="password_confirme">Confirma senha</string>
+    <string name="continui">Continuar</string>
+
+    <string name="agree_terms_policy">Ao clicar em Avançar, você concorda com nossos
+<b>Termos, Política de Dados e Política de Cookies.</b></string>
+    // "n%1$s para pegar o nome"
+    <string name="welcome_to_instagram"><b>BEM-VINDO AO INSTAGRAM,\n%1$s</b>
+\nEncontre pessoas para seguir e comece a compartilhar fotos.
+        Você pode alterar seu nome de usuário a qualquer momento.</string>
+
+    <string name="photo_register_subtitle">Adicione uma foto do perfil para que seus amigos saibam que é você.</string>
+
+    <string name="photo_register_title">Adicionar foto do perfil</string>
+    <string name="take_picture">Tirar foto</string>
+    <string name="search_gallery">Escolher na Biblioteca</string>
+    <string name="define_photo_profile">Definir uma foto do perfil</string>
+    <string name="jump">Pular</string>
+    <string name="add_photo">Adicionar uma foto</string>
+    <string name="home">Home</string>
+    <string name="posts">publicações</string>
+    <string name="followers">seguidores</string>
+    <string name="following">seguindo</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="username">username</string>
+    <string name="invalid_email">Email inválido</string>
+    <string name="password_not_equal">Senha e confirmar senha devem ser iguais.</string>
+    <string name="save">Salvar</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="photo">Foto</string>
+    <string name="gallery">Galeria</string>
+    <string name="write_caption">Escreva uma descrição…</string>
+    <string name="share">compartilhar</string>
+    <string name="go">Avançar</string>
+    <string name="search">Pesquisar</string>
+    <string name="unfollow">Seguindo</string>
+    <string name="follow">Seguir</string>
+    <string name="logout">Deseja sair?</string>
+    <string name="logout_action">Sair</string>
+    <string name="cancel">Cancelar</string>
+    <string name="invalid_password">Senha deve ter pelo menos 8 caracteres</string>
+    <string name="invalid_name">Nome deve ter pelomenos 3 caracteres</string>
+    <string name="empyt_list">Nenhum resgisto encontrado</string>
+    <string name="permission_camera_denied">Permissão não concedida</string>
+    <string name="todo">TODO</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/login_img_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="48dp"
+                android:contentDescription="@null"
+                android:src="@drawable/photo_icon" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_edit_email_input"
+                style="@style/Theme.Instagram.FormEditTextInput"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_edit_email"
+                    style="@style/Theme.Instagram.FormEdit_Text"
+                    android:autofillHints="@null"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.example.instagram.common.view.LoadingButton
+                android:id="@+id/register_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/next" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_darker"
+        app:layout_constraintBottom_toTopOf="@id/register_txt_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/register_txt_login"
+        style="@style/Theme.Instagram.TextViewBase"
+        android:layout_width="match_parent"
+        android:padding="24dp"
+        android:text="@string/already_has_account"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout><!-- Alteração no button para com.example.instagram.common.view.LoadingButton
+                <Button
+                    android:id="@+id/login_btn_enter"
+                    style="@style/Theme.Instagram.Button"
+                    android:enabled="false"
+                    android:text="@string/enter" />
+     -->
