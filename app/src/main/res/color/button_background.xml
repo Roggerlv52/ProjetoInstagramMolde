@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--Definição para mudar a cor do botão quando clickado-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+     <item android:color="@color/blue_disabled" android:state_enabled="false"/>
+     <item android:color="@color/blue_enabled" android:state_enabled="true"/>
+</selector>
