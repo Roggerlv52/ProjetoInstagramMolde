@@ -42,7 +42,7 @@ class AddFragment : Fragment(R.layout.fragment_add) {
          val uri  = bundle.getParcelable<Uri>("uri")
             uri.let {
                 val intent = Intent(requireContext(), AddActivity::class.java)
-                intent.putExtra("photoUri",uri)
+                intent.putExtra("photoUrl",uri)
                 addActivityResult.launch(intent)
             }
         }

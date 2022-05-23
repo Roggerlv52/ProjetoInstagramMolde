@@ -49,7 +49,7 @@ class FakeRegisterDataSource : RegisterDataSource {
         },2000)
     }
 
-    override fun updateUser(photoUri: Uri, callback: RegisterCallback) {
+    override fun updateUser(photo: Uri, callback: RegisterCallback) {
         Handler(Looper.getMainLooper()).postDelayed({
             val userAuth = Database.sessionAuth
 
@@ -58,14 +58,14 @@ class FakeRegisterDataSource : RegisterDataSource {
             }else{
               val index = Database.usersAuth.indexOf(Database.sessionAuth)
 
-                Database.usersAuth[index] = Database.sessionAuth!!.copy(photoUri = photoUri)
+                Database.usersAuth[index] = Database.sessionAuth!!.copy(photoUri = photo)
                 Database.sessionAuth = Database.usersAuth[index]
 
                     callback.onSuccess()
                    // callback.onFailure("Erro interno no servidor.")
             }
             callback.onComplete()
-        },2000)
+        },1000)
     }
 }
 

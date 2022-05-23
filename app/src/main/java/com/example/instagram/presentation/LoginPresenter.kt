@@ -1,5 +1,6 @@
 package com.example.instagram.presentation
 
+import android.util.Log
 import android.util.Patterns
 import com.example.instagram.R
 import com.example.instagram.common.model.UserAuth
@@ -12,6 +13,7 @@ class LoginPresenter(
     private var repository : LoginRepository) : Login.Presenter{
 
     override fun login(email: String, password: String) {
+        Log.e("Teste",email)
         val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
         val isPasswordValid = password.length >=8
 

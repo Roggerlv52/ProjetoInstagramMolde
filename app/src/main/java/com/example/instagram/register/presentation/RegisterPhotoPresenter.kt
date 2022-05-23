@@ -1,8 +1,6 @@
 package com.example.instagram.register.presentation
 
 import android.net.Uri
-import com.example.instagram.R
-import com.example.instagram.register.RegisterNameAndPassword
 import com.example.instagram.register.RegisterPhoto
 import com.example.instagram.register.data.RegisterCallback
 import com.example.instagram.register.data.RegisterRepository
@@ -12,11 +10,11 @@ class RegisterPhotoPresenter(
     private val repository: RegisterRepository
 ): RegisterPhoto.Presenter{
 
-    override fun updateUser(photoUri: Uri) {
+    override fun updateUser(photo: Uri) {
 
             view?.showProgress(true)
 
-            repository.updaterUser( photoUri, object : RegisterCallback{
+            repository.updaterUser( photo, object : RegisterCallback{
                 override fun onSuccess() {
                    view?.onUpdateSuccess()
                 }

@@ -2,7 +2,6 @@ package com.example.instagram.register.view
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -31,8 +30,8 @@ class RegisterNamePasswordFragment : Fragment(R.layout.fragment_register_name_pa
         val repository = DependencyInjector.registerEmailRepositoy()
         presenter = RegisterNameAndPasswordPresenter(this,repository)
 
-        val email = arguments?.getString(KEY_EMAIL)//?: throw IllegalArgumentException("email not found")
-       Log.i("teste",email.toString())
+        val email = arguments?.getString(KEY_EMAIL)?: throw IllegalArgumentException("email not found")
+
         binding?.let {
             with(it) {
                 registerTxtLogin.setOnClickListener {
@@ -41,8 +40,9 @@ class RegisterNamePasswordFragment : Fragment(R.layout.fragment_register_name_pa
                 registerNameBtnNext.setOnClickListener {
                     presenter.create(
  //---------------------email ?:"",-----------------------------------------------
-                        email?:"Email não encontrado",
-                        registerEditName.text.toString(),
+                        email,
+
+                        registerEditName.text.toString(),//?:"Email não encontrado",
                         registerEditPassword.text.toString(),
                         registerEditComfirme.text.toString()
                     )

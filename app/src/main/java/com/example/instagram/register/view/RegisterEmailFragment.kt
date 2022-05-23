@@ -11,7 +11,8 @@ import com.example.instagram.databinding.FragmentRegisterEmailBinding
 import com.example.instagram.register.RegisterEmail
 import com.example.instagram.register.presentation.RegisterEmailPresenter
 
-class RegisterEmailFragment : Fragment(R.layout.fragment_register_email), RegisterEmail.view {
+class RegisterEmailFragment : Fragment(R.layout.fragment_register_email),
+    RegisterEmail.View {
     private var binding: FragmentRegisterEmailBinding? = null
     private var fragamentAttachLiestener : FragamentAttachLiestener? = null
 
@@ -23,7 +24,6 @@ class RegisterEmailFragment : Fragment(R.layout.fragment_register_email), Regist
         binding = FragmentRegisterEmailBinding.bind(view)
 
         val repositer = DependencyInjector.registerEmailRepositoy()
-
          presenter = RegisterEmailPresenter(this,repositer)
 
         //buscar as referencias em baixo

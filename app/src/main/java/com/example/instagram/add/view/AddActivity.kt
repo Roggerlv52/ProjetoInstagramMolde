@@ -32,7 +32,7 @@ class AddActivity : AppCompatActivity(), Add.View{
         supportActionBar?.setHomeAsUpIndicator(drawable)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        uri = intent.extras?.getParcelable("photoUri")?:throw RuntimeException("photo not found")
+        uri = intent.extras?.getParcelable("photoUrl")?:throw RuntimeException("photo not found")
         binding.addImgCaption.setImageURI(uri)
         val repository = DependencyInjector.addrepository()
         presenter = AddPresenter(this, repository )

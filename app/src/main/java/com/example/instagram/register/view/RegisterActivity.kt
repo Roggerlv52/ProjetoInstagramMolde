@@ -60,10 +60,7 @@ class RegisterActivity : AppCompatActivity(), FragamentAttachLiestener {
     override fun goToWelcomeScreen(name: String) {
         val fragment = RegisterWelcomeFragment().apply { // Welcome-pass6
             arguments = Bundle().apply {
-                putString(
-                    KEY_NAME,
-                    name
-                ) // Welcome-pass7 criar chave valor na tela  RegisterWelcomeFragment
+                putString(KEY_NAME, name) // Welcome-pass7 criar chave valor na tela  RegisterWelcomeFragment
             }
         }
         replaceFragment(fragment)
@@ -81,7 +78,6 @@ class RegisterActivity : AppCompatActivity(), FragamentAttachLiestener {
     }
 //    open galeria
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-            Log.i("Teste", uri.toString())
     uri?.let {
         openImageCropper(it) }
 

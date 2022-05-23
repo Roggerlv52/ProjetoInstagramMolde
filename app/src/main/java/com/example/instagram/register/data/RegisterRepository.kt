@@ -7,10 +7,10 @@ class RegisterRepository(private val dataSource : RegisterDataSource) {
     fun create(email : String,callback : RegisterCallback){
         dataSource.create(email,callback)
     }
-    fun create( name : String,email : String, password : String,callback : RegisterCallback) {
-        dataSource.create(email,name,password, callback)
+    fun create(email : String, name : String, password : String,callback : RegisterCallback) {
+        dataSource.create(name, email, password, callback)
     }
-    fun updaterUser(photo : Uri, callback : RegisterCallback){
-        dataSource.updateUser(photo,callback)
+    fun updaterUser(photoUri : Uri, callback : RegisterCallback){
+        dataSource.updateUser(photoUri,callback)
     }
 }

@@ -1,4 +1,3 @@
-@file:Suppress("DEPRECATED_ANNOTATION")
 
 package com.example.instagram.common.model
 

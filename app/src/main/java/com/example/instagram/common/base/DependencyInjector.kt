@@ -9,11 +9,10 @@ import com.example.instagram.home.data.HomeDataSourceFactory
 import com.example.instagram.home.data.HomeRepository
 import com.example.instagram.login.data.FakeDataSource
 import com.example.instagram.login.data.LoginRepository
-import com.example.instagram.post.data.PostDataSource
 import com.example.instagram.post.data.PostLocalDataSource
 import com.example.instagram.post.data.PostRepository
 import com.example.instagram.profile.data.*
-import com.example.instagram.register.data.FakeRegisterDataSource
+import com.example.instagram.register.data.FireRegisterDataSource
 import com.example.instagram.register.data.RegisterRepository
 import com.example.instagram.search.data.SearchFakeRemoteDataSource
 import com.example.instagram.search.data.SearchRepository
@@ -28,7 +27,7 @@ object DependencyInjector {
       return LoginRepository(FakeDataSource())
     }
     fun registerEmailRepositoy() : RegisterRepository{
-       return RegisterRepository(FakeRegisterDataSource())
+       return RegisterRepository(FireRegisterDataSource())
     }
     fun searchRepository():SearchRepository{
         return SearchRepository(SearchFakeRemoteDataSource())

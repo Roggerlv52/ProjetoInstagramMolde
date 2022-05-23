@@ -6,7 +6,7 @@ import com.example.instagram.common.base.BaseView
 
 interface RegisterNameAndPassword {
     interface Presenter : BasePresenter {
-        fun create(email: String, name: String, password: String, confirme : String)
+        fun create( email: String,name: String, password: String, confirme : String)
     }
     interface view : BaseView<Presenter> {
         //criar caso de usos

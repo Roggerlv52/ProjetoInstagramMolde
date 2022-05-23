@@ -7,7 +7,7 @@ import com.example.instagram.register.data.RegisterCallback
 import com.example.instagram.register.data.RegisterRepository
 
 class RegisterEmailPresenter(
-    private var view: RegisterEmail.view?,
+    private var view: RegisterEmail.View?,
     private val repository: RegisterRepository
 ): RegisterEmail.Presenter {
 
