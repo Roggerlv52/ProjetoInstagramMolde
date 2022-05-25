@@ -16,11 +16,12 @@ Essta função extendida é para esconder o teclado em dispositico com sdk 21
 fun Activity.hidekyboard() {
     val imm: InputMethodManager =
         getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+
     var view: View? = currentFocus
     if (view == null) {
         view = View(this)
     }
-    imm.hideSoftInputFromWindow(view?.windowToken, 0)
+    imm.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
 fun Activity.animationEnd(callback: () -> Unit): AnimatorListenerAdapter {

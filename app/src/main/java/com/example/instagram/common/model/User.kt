@@ -2,14 +2,12 @@
 
 package com.example.instagram.common.model
 
-import android.net.Uri
-
 data class User(
     val uuid: String? = null,
-    val name : String? = null,
+    val name: String? = null,
     val email: String? = null,
-    val password: String,
-    val photoUrl: String,
-    val posCount: Int = 0,
-    val follwingCount: Int = 0,
-    val followersCount: Int = 0)
+    val photoUrl: String? = null,
+    val postCount: Int = 0,
+    val followers: Int = 0,
+    val following: Int = 0,
+)

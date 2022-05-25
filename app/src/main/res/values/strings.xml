@@ -14,8 +14,12 @@
     <string name="password">Senha</string>
     <string name="enter">Enter</string>
     <string name="or">OU</string>
+    <!--
     <string name="does_not_have_account">Não tem nenhuma conta? <b><font color="#FF000000">Cadastre-se</font></b></string>
     <string name="already_has_account">Já tem uma conta? <b><font color="#E30505">Faça Login.</font></b></string>
+     -->
+    <string name="does_not_have_account">Não tem nenhuma conta? <b>Cadastre-se</b></string>
+    <string name="already_has_account">Já tem uma conta? <b>Faça Logi</b></string>
     <string name="name">Nome</string>
     <string name="password_confirme">Confirma senha</string>
     <string name="continui">Continuar</string>

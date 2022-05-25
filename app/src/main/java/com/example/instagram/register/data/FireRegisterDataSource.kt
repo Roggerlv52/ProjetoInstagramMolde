@@ -32,7 +32,7 @@ class FireRegisterDataSource : RegisterDataSource {
     override fun create(email: String, name: String, password: String, callback: RegisterCallback) {
 
         FirebaseAuth.getInstance()
-            .createUserWithEmailAndPassword(name, password)
+            .createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener { result ->
 
                 val uid = result.user?.uid
@@ -45,8 +45,8 @@ class FireRegisterDataSource : RegisterDataSource {
                         .document(uid)
                         .set(
                             hashMapOf(
-                                "name" to email,
-                                "email" to name,
+                                "name" to name,
+                                "email" to email,
                                 "followers" to 0,
                                 "following" to 0,
                                 "postCount" to 0,
@@ -68,12 +68,6 @@ class FireRegisterDataSource : RegisterDataSource {
             .addOnFailureListener { exeption ->
                 callback.onFailure(exeption.message ?: "Erro interno no servidor")
             }
-/*
-            .addOnCompleteListener {
-                callback.onComplete()
-            }
-
- */
 
     }
 
@@ -84,10 +78,13 @@ class FireRegisterDataSource : RegisterDataSource {
             return
         }
         val storageRef = FirebaseStorage.getInstance().reference
-        val imgRef = storageRef.child("images/")
+
+        val imgRef = storageRef.child("images")
             .child(uid)
             .child(photo.lastPathSegment!!)
+
         imgRef.putFile(photo)
+
             .addOnSuccessListener { result ->
                 imgRef.downloadUrl
                     .addOnSuccessListener { res ->

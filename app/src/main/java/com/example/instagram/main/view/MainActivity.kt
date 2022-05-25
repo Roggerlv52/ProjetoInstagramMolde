@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun goToProfile(uuid: String) {
-        Log.d("Teste",uuid)
         val fragment = ProfileFragment().apply {
             arguments = Bundle().apply {
                 // putString(ProfileFragment.KEY_USER_ID,uuid)

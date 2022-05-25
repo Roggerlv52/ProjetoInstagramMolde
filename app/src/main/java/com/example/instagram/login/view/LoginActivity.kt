@@ -68,7 +68,9 @@ class LoginActivity : AppCompatActivity(),Login.View {
     }
 
     override fun onUserAuthenticated() {
- // Ir para tela principal
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
 
     }
     override fun onUserUnauthoried(message:String) = //  Mostra um alerta
